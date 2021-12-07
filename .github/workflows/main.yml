@@ -14,3 +14,56 @@ jobs:
         with:
           # Your GitHub token
           token: ${{ secrets.METRICS_TOKEN }}
+          
+          # Output file
+          template: classic
+          config_display: large
+          filename: stats.svg
+          config_output: svg
+          
+      - name: Coding habits
+        if: always()
+        uses: lowlighter/metrics@main
+        with:
+          # Common config
+          user: rysie
+          token: ${{ secrets.METRICS_TOKEN }}
+          committer_branch: main
+          committer_message: Update ${filename} - [GitHub Action]
+          config_timezone: Etc/UTC
+
+          # Output file
+          template: classic
+          config_display: large
+          filename: habits.svg
+          config_output: svg
+
+          # Output info
+          base: ""
+
+          plugin_habits: yes
+          plugin_habits_days: 365
+          plugin_habits_facts: yes
+          plugin_habits_from: 200
+
+      - name: Commit calendar
+        if: always()
+        uses: lowlighter/metrics@main
+        with:
+          # Common config
+          user: rysie
+          token: ${{ secrets.METRICS_TOKEN }}
+          committer_branch: main
+          committer_message: Update ${filename} - [GitHub Action]
+          config_timezone: Etc/UTC
+
+          # Output file
+          template: classic
+          filename: isocalendar.svg
+          config_output: svg
+
+          # Output info
+          base: ""
+
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
