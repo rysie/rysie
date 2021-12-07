@@ -14,4 +14,6 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-![Metrics](https://github.com/rysie/rysie/blob/main/github-metrics.svg)
+![Metrics](https://github.com/rysie/rysie/blob/main/stats.svg)
+![Metrics](https://github.com/rysie/rysie/blob/main/isocalendar.svg)
+![Metrics](https://github.com/rysie/rysie/blob/main/habits.svg)
